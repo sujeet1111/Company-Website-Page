@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services-Evident</title>
+  <link rel="shortcut-icon" href="evident logo.png">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background-color: #f4f8fb;
+    }
+
+    .top-header {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        position: fixed; /* Changed from relative to fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        }
+
+        .top-header.hide {
+        transform: translateY(-100%);
+        }
+
+        .logo-container {
+        display: flex;
+        align-items: center;
+        }
+
+        .logo-container img {
+        height: 30px;
+        margin-right: 0.5rem;
+        }
+
+        .company-name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #007ab6;
+        }
+
+        .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        }
+
+        .nav-links a {
+        position: relative;
+        color: #007ab6;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        }
+
+        .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: #007ab6;
+        transition: 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+        width: 100%;
+        }
+    .about-hero {
+      background: linear-gradient(to right, #007ab6, #003f73);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      width: 100vw;
+    }
+
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+    
+
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .section h2 {
+      color: #007ab6;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p, .section ul {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    
+
+    .loyalty-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tier {
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff;
+  border: 2px solid #007ab6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.tier h3 {
+  color: #007ab6;
+  margin-bottom: 0.5rem;
+}
+
+.silver { border-color: #a0a0a0; }
+.gold { border-color: #c6a300; }
+.platinum { border-color: #007ab6; }
+
+#sets-apart {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-left: 4px solid #007ab6;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.features-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+    /* Footer */
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  background-color:#007ab6;
+
+  color: white;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.footer-column h3 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-header">
+    <div class="logo-container">
+      <img src="evident logo.png" alt="Evident Logo" />
+      <span class="company-name">EVIDENT</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href=index.html>Home</a>
+      <a href="aboutus.html" >About Us</a>
+      <a href="#solutions"class="active">Services</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+   
+  </div>
+
+  </header>
+
+  
+        <section class="about-hero">
+            <h1>Expert Recuritment Solutions for Ambitious Businesses.</h1>
+            <p>At Evident,we offer a comprehensive range of recruitment outsourcing services designed to meet the unique needs of our clients. From talent acquisition to workforce management, we've got you covered.</p>
+        </section>
+
+<section class="section" id="services">
+  <h2>Our Services</h2>
+
+  <article class="service-item">
+    <h3>Talent Acquisition</h3>
+    <p>
+      As a leading recruitment partner, we specialize in delivering end-to-end talent acquisition solutions designed to meet the unique hiring needs of every client. Our customized recruitment strategies are built around your business goals, ensuring that each role is filled with the right talent. From targeted sourcing and rigorous screening to structured interview management and final candidate selection, we manage the entire hiring lifecycle with precision and professionalism. By combining industry expertise with modern tools and personalized service, we help companies attract, evaluate, and hire top-tier talent who drive growth and performance.
+    </p>
+  </article>
+
+  <article class="service-item">
+    <h3>Recruitment Process Outsourcing (RPO)</h3>
+    <p>
+      Simplify your hiring with our end-to-end recruitment management solutions. We handle the entire talent acquisition process — from sourcing to onboarding — to deliver process optimization, efficiency gains, and high-quality hires. Our scalable recruitment solutions adapt to your business needs, helping you grow faster with the right talent, at the right time.
+    </p>
+  </article>
+
+  <article class="service-item">
+    <h3>Workforce Management</h3>
+    <p>
+      Optimize your workforce with our end-to-end solutions tailored for agility and compliance. We provide temporary and contract staffing to meet dynamic business demands, along with payroll management and regulatory compliance to ensure accuracy and peace of mind. With advanced workforce analytics and insights, we help you make smarter staffing decisions and improve operational efficiency.
+    </p>
+  </article>
+
+  <article class="service-item">
+    <h3>Executive Search</h3>
+    <p>
+      Secure top-tier leadership with our specialized executive search services. We focus on senior-level talent acquisition, including C-suite and board appointments, through a highly targeted and confidential search and selection process. Our deep industry knowledge and discreet approach ensure you find visionary leaders who drive lasting impact.
+    </p>
+  </article>
+</section>
+<section class="section" id="sla">
+  <h2>Service Level Agreement (SLA)</h2>
+  <p>At <strong>Evident</strong>, we are committed to delivering exceptional recruitment outcomes and long-term client satisfaction.</p>
+  
+  <ul>
+    <li><strong>Candidate Guarantee:</strong> If a candidate placed by us leaves your organization within <strong>90 days</strong> of their joining date, we will provide a <strong>free replacement</strong> at no additional cost.</li>
+    <li>This ensures you have the right talent in place and confidence in every hire we help you make.</li>
+  </ul>
+  
+  <p>Our SLA reflects the quality and reliability of our services, and our dedication to building strong, results-driven partnerships.</p>
+</section>
+
+
+  <section class="section" id="loyalty">
+  <h2>Client Loyalty Program</h2>
+  <p>At <strong>Evident</strong>, we value long-term partnerships. Our <strong>Loyalty Program</strong> is designed to reward our most dedicated clients with exclusive benefits based on quarterly hiring volume.</p>
+
+  <div class="loyalty-tiers">
+    <div class="tier silver">
+      <h3>🥈 Silver Tier</h3>
+      <p><strong>5–9 hires in a quarter</strong></p>
+      <p>→ <strong>10% discount</strong> on total billing</p>
+    </div>
+
+    <div class="tier gold">
+      <h3>🥇 Gold Tier</h3>
+      <p><strong>10+ hires in a quarter</strong></p>
+      <p>→ <strong>15% discount</strong> on total billing</p>
+    </div>
+
+    <div class="tier platinum">
+      <h3>🏆 Platinum Tier</h3>
+      <p><strong>15+ hires in a quarter</strong></p>
+      <p>→ <strong>20% discount</strong> on total billing</p>
+    </div>
+  </div>
+
+  <p>As your hiring needs grow, so do your rewards. Stay with Evident and get more value with every placement.</p>
+</section>
+<section class="section" id="sets-apart">
+  <h2>What Sets Us Apart</h2>
+  <p>At <strong>Evident</strong>, we go beyond traditional recruitment. Here's why businesses choose us as their trusted talent partner:</p>
+
+  <ul class="features-list">
+    <li>✅ <strong>Personalized Service & Dedicated Account Management</strong> — We tailor our approach to your specific needs and assign a dedicated team to ensure consistent support.</li>
+    <li>🌍 <strong>Access to a Global Network of Top Talent</strong> — Our reach spans industries and borders, giving you access to qualified professionals worldwide.</li>
+    <li>📈 <strong>Proven Track Record of Delivering Exceptional Results</strong> — We’ve successfully placed top-tier talent across sectors, earning the trust of clients through consistent performance.</li>
+  </ul>
+</section>
+<section class="cta-section" style="background: linear-gradient(to right, #007ab6, #005f8c); color: white; padding: 3rem 2rem; text-align: center; border-radius: 8px; margin: 2rem 0;">
+  <h3 style="font-size: 2rem; margin-bottom: 1rem;">Elevate Your Business with Expert Recruitment Solutions</h3>
+  <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    Discover how our tailored talent strategies can transform your workforce and drive growth. Get in touch with us today to learn more!
+  </p>
+  <a href="contact.html" style="background-color: #fff; color: #007ab6; padding: 0.8rem 1.8rem; border-radius: 5px; font-weight: 600; text-decoration: none; font-size: 1rem; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: background-color 0.3s ease;">
+    Contact Us Now
+  </a>
+</section>
+
+
+
+
+  
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("open");
+    }
+  </script>
+<!-- Chat Button -->
+<button id="chatBtn" onclick="openChat()">💬</button>
+<script>// Chat button placeholder
+  function openChat() {
+    alert("Chat feature coming soon!");
+  }
+</script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("open");
+  }
+
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector('.top-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < lastScrollY) {
+      // Scrolling up
+      header.classList.remove('hide');
+    } else {
+      // Scrolling down
+      header.classList.add('hide');
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
+
+<script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("open");
+    }
+  </script>
+
+<style>
+    #chatBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: #007ab6;
+  border: 4px solid #007ab6;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.nav-links {
+  transition: all 0.3s ease;
+}
+</style>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("open");
+  }
+</script>
+
+  <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Evident</h3>
+            <p>Infinity of Talent, Evident Results</p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Solutions</h3>
+            <ul class="footer-links">
+              <li><a href="#">Recruitment Process Outsourcing</a></li>
+              <li><a href="#">Executive Search</a></li>
+              <li><a href="#">Talent Acquisition</a></li>
+              <li><a href="#">Workforce Planning</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li><a href="mailto:support@evidentpvt.in">support@evidentpvt.in</a>
+             </li><li> <a href="mailto:evidentpvt.ltd@gmail.com">evidentpvt.ltd@gmail.com</a>
+              </li>
+              <li><a href="tel:+91 8580571237">8580571237</a></li>
+            
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Evident Recruitment Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+</body>
+</html>

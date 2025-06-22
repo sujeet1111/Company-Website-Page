@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Evident Recruitment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav .logo {
+        float: right;
+      font-size: 1.5em;
+      color: #007BBD;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #007BBD;
+    }
+
+    /* Marquee / Running headline */
+    .marquee {
+      background-color: #e6f2ff;
+      color: #007BBD;
+      padding: 0.5em 0;
+      text-align: center;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Form section */
+    .form-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #005999;
+      color: white;
+      padding: 2em;
+      flex-wrap: wrap;
+    }
+
+    .form-box {
+      background: white;
+      color: black;
+      padding: 2em;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .form-box h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .form-group input, textarea {
+      flex: 1 1 48%;
+      padding: 0.75em;
+      margin-top: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    textarea {
+      flex: 1 1 100%;
+    }
+    nav img{
+        width: 50px;
+    }
+    .submit-btn {
+      background-color: #f7b733;
+      border: none;
+      padding: 0.75em 1.5em;
+      margin-top: 1em;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Content section */
+    .content {
+      background-color: #e6f2ff;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .content h1 {
+      color: #007BBD;
+    }
+
+    .content p {
+      max-width: 800px;
+      margin: 1em auto;
+      font-size: 1.1em;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: #e6f2ff;
+      padding: 2em;
+      display: none;
+    }
+
+    .about-section h2 {
+      color: #007BBD;
+      text-align: center;
+    }
+
+    .about-section p {
+      max-width: 800px;
+      margin: 1em auto;
+      line-height: 1.6em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>
+    <img src="photo_2025-06-08_16-36-18-removebg-preview.png" alt="Evident Logo">
+    
+    <div class="logo">EVIDENT</div>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#" onclick="showAbout()">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Running Headline -->
+  <div class="marquee">
+    <div class="marquee-text">
+      At Evident, we're passionate about connecting exceptional talent with forward-thinking businesses. Our story began with a simple yet ambitious goal: to revolutionize the recruitment outsourcing industry.
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <div class="form-section">
+    <div class="form-box">
+      <h2>Start Your Trial Today</h2>
+      <div class="form-group">
+        <input type="text" placeholder="First name*" />
+        <input type="text" placeholder="Last name*" />
+        <input type="email" placeholder="Business email*" />
+        <input type="text" placeholder="Phone number*" />
+        <input type="text" placeholder="Job title*" />
+        <input type="text" placeholder="Company name*" />
+        <textarea rows="4" placeholder="How can we help?"></textarea>
+      </div>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    <h1>Elevate Your Workforce</h1>
+    <p>
+      In a rapidly evolving business landscape, securing top talent is crucial for driving growth, innovation, and success. At Evident, we leverage our global expertise, cutting-edge technology, and extensive network to deliver tailored recruitment outsourcing solutions that empower organizations to thrive.
+    </p>
+  </div>
+
+  <!-- About Section -->
+  <div id="aboutSection" class="about-section">
+    <h2>About Us</h2>
+    <p><strong>Headline:</strong> Our Story, Our Mission, Our Values</p>
+    <p><strong>Introduction:</strong> At Evident, we're passionate about connecting exceptional talent with forward-thinking businesses. Our story began with a simple yet ambitious goal: to revolutionize the recruitment outsourcing industry.</p>
+    <p><strong>Company History:</strong> Evident was founded on the principles of innovation, excellence, and customer satisfaction. Over the years, we've grown into a global leader in recruitment outsourcing, serving clients across various industries.</p>
+    <p><strong>Our Mission:</strong> Empowering businesses to thrive by providing personalized recruitment solutions that connect exceptional talent, drive growth, and foster long-term success.</p>
+    <p><strong>Our Values:</strong>
+      <ul>
+        <li><strong>Innovation:</strong> We continuously strive to improve our processes, technology, and services to stay ahead of the curve.</li>
+        <li><strong>Excellence:</strong> We're committed to delivering exceptional results, exceeding client expectations, and setting new standards in recruitment outsourcing.</li>
+        <li><strong>Customer Satisfaction:</strong> We prioritize building long-term relationships with our clients, understanding their unique needs, and providing tailored solutions.</li>
+      </ul>
+    </p>
+    <p><strong>CTA:</strong> Learn more about our services and how we can help your business thrive. Explore our solutions today!</p>
+  </div>
+
+  <script>
+    function showAbout() {
+      document.getElementById("aboutSection").style.display = "block";
+      window.scrollTo({ top: document.getElementById("aboutSection").offsetTop, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
